@@ -1,4 +1,4 @@
-baseurl = "https://example.com/"  # Include trailing slash
+baseurl = "https://kevelyn1.github.io/mapcrastinating/"  # Include trailing slash
 title = "Evelyn Uuemaa's Maps"
 
 theme = "hugo-swift-theme"

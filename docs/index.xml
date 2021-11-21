@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Evelyn Uuemaa&#39;s Maps</title>
-    <link>https://example.com/</link>
+    <link>https://kevelyn1.github.io/mapcrastinating/</link>
     <description>Recent content on Evelyn Uuemaa&#39;s Maps</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kevelyn1.github.io/mapcrastinating/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to create Tanaka contours</title>
-      <link>https://example.com/post/tanaka_contours/</link>
+      <link>https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/</link>
       <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/tanaka_contours/</guid>
+      <guid>https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/</guid>
       <description>Tanaka contours aka illuminated contours is terrain visualization method developed first by Prof. Tanaka Kitirito in 1950. The mimics 3D by illuminating the northwestern slopes and shading the opposite slopes. I followed Anita Graser&amp;rsquo;s tutorial to create Tanaka contours and updated it a bit as QGIS has evolved since then. Her tutorial was inspired by Hannes Kröger&amp;rsquo;s attempt to create the effect using QGIS.
 You need a DEM for creating Tanaka contoours.</description>
     </item>
     
     <item>
       <title>About me</title>
-      <link>https://example.com/about/</link>
+      <link>https://kevelyn1.github.io/mapcrastinating/about/</link>
       <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>https://kevelyn1.github.io/mapcrastinating/about/</guid>
       <description>About I&amp;rsquo;m a geographer by heart and by education. Currenty, I&amp;rsquo;m Assoc. Professor in Geoinformatics and Head of Department of Geography at University of Tartu, Estonia. I hold a PhD in landscape ecology and environmental protection and my research interests evolve around the interactions of land use/land cover and water quality, landscape changes and geospatial modelling with machine learning. My special interests are geospatial visualisation and map design. I&amp;rsquo;m always keen on trying new visualisation methods and especially with the focus on making maps nice fast with open-source software like QGIS and Blender.</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://example.com/contact/</link>
+      <link>https://kevelyn1.github.io/mapcrastinating/contact/</link>
       <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/contact/</guid>
+      <guid>https://kevelyn1.github.io/mapcrastinating/contact/</guid>
       <description>Contact Interested in collaboration or want to ask something? Contact me via LinkedIn or Twitter</description>
     </item>
     

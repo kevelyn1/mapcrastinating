@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tutorials on Evelyn Uuemaa&#39;s Maps</title>
-    <link>https://example.com/tags/tutorials/</link>
+    <link>https://kevelyn1.github.io/mapcrastinating/tags/tutorials/</link>
     <description>Recent content in tutorials on Evelyn Uuemaa&#39;s Maps</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kevelyn1.github.io/mapcrastinating/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to create Tanaka contours</title>
-      <link>https://example.com/post/tanaka_contours/</link>
+      <link>https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/</link>
       <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/post/tanaka_contours/</guid>
+      <guid>https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/</guid>
       <description>Tanaka contours aka illuminated contours is terrain visualization method developed first by Prof. Tanaka Kitirito in 1950. The mimics 3D by illuminating the northwestern slopes and shading the opposite slopes. I followed Anita Graser&amp;rsquo;s tutorial to create Tanaka contours and updated it a bit as QGIS has evolved since then. Her tutorial was inspired by Hannes Kröger&amp;rsquo;s attempt to create the effect using QGIS.
 You need a DEM for creating Tanaka contoours.</description>
     </item>

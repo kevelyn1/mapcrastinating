@@ -1,3 +1,12 @@
 Change banner image:
 themes/hogo-swift-theme/layouts/partials/audio.html
 Change the image
+
+
+## github publish webpage
+
+- "docs" folder is what makes the website
+- generate: "hugo"
+- Github pages uses Jekyll by defualt so we have to tell it NOT TO -> .nojekyll file
+- "touch docs/.nojekyll"
+- git add .

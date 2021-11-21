@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Evelyn Uuemaa&#39;s Maps</title>
-    <link>https://example.com/categories/</link>
+    <link>https://kevelyn1.github.io/mapcrastinating/categories/</link>
     <description>Recent content in Categories on Evelyn Uuemaa&#39;s Maps</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://kevelyn1.github.io/mapcrastinating/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
