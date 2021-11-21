@@ -10,3 +10,5 @@ Change the image
 - Github pages uses Jekyll by defualt so we have to tell it NOT TO -> .nojekyll file
 - "touch docs/.nojekyll"
 - git add .
+- git commit -m "bug fix new content"
+- git push origin master
