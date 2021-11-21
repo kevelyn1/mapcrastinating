@@ -1,0 +1,22 @@
+{{ partial "intro" . }}
+{{ $filteredPosts := .Site.Params.blogDir }}
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+  {{ $pages = .Site.RegularPages }}
+  {{ if $filteredPosts }}
+    {{ $pages = where $.Site.RegularPages "Section" $filteredPosts }}
+  {{ end }}
+
+{{ end }}
+<ul class='posts wrap' id = 'posts'>
+  {{ range (.Paginate $pages).Pages }}
+    {{ if and ( isset .Params "hidden") ( eq .Params.hidden "false") }}
+      {{ partial "excerpt" . }}
+    {{ else if and ( isset .Params "hidden") ( eq .Params.hidden "true") }}
+    <!-- empty -->
+    {{ else }}
+      {{ partial "excerpt" . }}
+    {{ end }}
+  {{ end }}
+</ul>
+{{ template "_internal/pagination.html" . }}

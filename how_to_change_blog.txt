@@ -1,0 +1,3 @@
+Change banner image:
+themes/hogo-swift-theme/layouts/partials/audio.html
+Change the image
