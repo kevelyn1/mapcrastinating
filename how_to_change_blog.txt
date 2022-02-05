@@ -1,14 +1,25 @@
-Change banner image:
-themes/hogo-swift-theme/layouts/partials/audio.html
-Change the image
-
 
 ## github publish webpage
 
 - "docs" folder is what makes the website
-- generate: "hugo"
+- output folder in config.toml should be docs
+- baseurl should be that of the target website
+- generate: "hugo#
 - Github pages uses Jekyll by defualt so we have to tell it NOT TO -> .nojekyll file
 - "touch docs/.nojekyll"
 - git add .
 - git commit -m "bug fix new content"
 - git push origin master
+
+Start git bash in \my_blog
+Type hugo serve to the command line and copy the web address (something like http://localhost:1313/mapcrastinating/) to your browser - there you can see the changes locally.
+Once the changes are finished use git bash to:
+- git add .
+- git commit -m "bug fix new content"
+- git push origin master
+
+
+All images go to: \my_blog\static\images
+All posts go to: \my_blog\content\post
+Change banner image:
+themes/hogo-swift-theme/layouts/partials/audio.html

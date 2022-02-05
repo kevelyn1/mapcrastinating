@@ -12,7 +12,7 @@ image = "tanaka_banner.png"
 [Tanaka contours](http://wiki.gis.com/wiki/index.php/Tanaka_contours) aka illuminated contours is terrain visualization method developed first by Prof. Tanaka Kitirito in 1950. The mimics 3D by illuminating the northwestern slopes and shading the opposite slopes.
 I followed [Anita Graser's tutorial](https://anitagraser.com/2015/05/24/how-to-create-illuminated-contours-tanaka-style/) to create Tanaka contours and updated it a bit as QGIS has evolved since then. Her tutorial was inspired by [Hannes Kröger's attempt to create the effect using QGIS](https://anitagraser.com/2015/05/24/how-to-create-illuminated-contours-tanaka-style/).
 
-You need a DEM for creating Tanaka contoours. If you don't have any yourself then you may download free [SRTM](https://dwtkns.com/srtm30m/). First step is to create contours from the raster DEM by using Contours tool in QGIS.
+You need a DEM for creating Tanaka contours. If you don't have any yourself then you may download free [SRTM](https://dwtkns.com/srtm30m/). First step is to create contours from the raster DEM by using Contours tool in QGIS.
 ![image of create contours](../../images/blog/tanaka_1.png)
 ![image of contours](../../images/blog/tanaka_2.png)
 
