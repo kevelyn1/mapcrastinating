@@ -37,3 +37,6 @@ To finalise the map, you can "crop" it with your study area borders by using Inv
 
 Finally, you can add the original point data with labels to the map. However, if you want to show the original values on the map then they might not align exactly with the interpolation like said before. Only IDW method would keep the exact ranges. Therefore I will show only weather station names on this map.
 ![image of contours final](../../images/blog/paper_8.png)
+
+The same map made with IDW interpolation would look like this:
+![image of contours final](../../images/blog/paper_9.png)
