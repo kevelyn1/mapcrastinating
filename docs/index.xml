@@ -5,7 +5,17 @@
     <link>https://kevelyn1.github.io/mapcrastinating/</link>
     <description>Recent content on Evelyn Uuemaa&#39;s Maps</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 10 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://kevelyn1.github.io/mapcrastinating/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://kevelyn1.github.io/mapcrastinating/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to create a paper-cut style map</title>
+      <link>https://kevelyn1.github.io/mapcrastinating/post/paper_cut/</link>
+      <pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://kevelyn1.github.io/mapcrastinating/post/paper_cut/</guid>
+      <description>I&amp;rsquo;m not sure where the paper cut style originates but I guess it has been around in the design world already long time. However, likely one of the first GIS-approaches was done by John Nelson with ArcPro. This is also available as style for ArcPro. However, I aimed to create the same style with QGIS and the mapping theme was inspired by the beautiful snow this winter in Estonia.
+For input data you would need any numerical point data (rain, temperature, snow etc.</description>
+    </item>
+    
     <item>
       <title>How to create Tanaka contours</title>
       <link>https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/</link>
@@ -13,7 +23,7 @@
       
       <guid>https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/</guid>
       <description>Tanaka contours aka illuminated contours is terrain visualization method developed first by Prof. Tanaka Kitirito in 1950. The mimics 3D by illuminating the northwestern slopes and shading the opposite slopes. I followed Anita Graser&amp;rsquo;s tutorial to create Tanaka contours and updated it a bit as QGIS has evolved since then. Her tutorial was inspired by Hannes Kröger&amp;rsquo;s attempt to create the effect using QGIS.
-You need a DEM for creating Tanaka contoours.</description>
+You need a DEM for creating Tanaka contours.</description>
     </item>
     
     <item>

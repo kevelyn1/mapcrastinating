@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang='en'><head>
-  <title>How to create Tanaka contours | Evelyn Uuemaa&#39;s Maps</title>
+  <title>How to create a paper-cut style map | Evelyn Uuemaa&#39;s Maps</title>
   <meta charset='utf-8'>
   <meta name="generator" content="Hugo 0.89.1" />
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
   <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
 <meta property = 'og:locale' content = 'en_US' />
 <meta property="og:type" content="article">
-<meta property = 'og:title' content = 'How to create Tanaka contours' />
-<meta name="description" content="Tanaka contours aka illuminated contours is terrain visualization method developed first by Prof. Tanaka Kitirito in 1950. The mimics 3D by illuminating the …">
-<meta property = 'og:description' content = 'Tanaka contours aka illuminated contours is terrain visualization method developed first by Prof. Tanaka Kitirito in 1950. The mimics 3D by illuminating the …'>
-<meta property = 'og:url' content = 'https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/' />
-<meta property = 'og:image' content = 'https://kevelyn1.github.io/mapcrastinating/images/tanaka_banner.png'/>
+<meta property = 'og:title' content = 'How to create a paper-cut style map' />
+<meta name="description" content="I&rsquo;m not sure where the paper cut style originates but I guess it has been around in the design world already long time. However, likely one of the first …">
+<meta property = 'og:description' content = 'I&rsquo;m not sure where the paper cut style originates but I guess it has been around in the design world already long time. However, likely one of the first …'>
+<meta property = 'og:url' content = 'https://kevelyn1.github.io/mapcrastinating/post/paper_cut/' />
+<meta property = 'og:image' content = 'https://kevelyn1.github.io/mapcrastinating/images/paper_cut_banner.png'/>
 <meta name = 'twitter:card' content = 'summary_large_image' />
 <meta name = 'twitter:creator' content = ''>
-<meta name = 'twitter:title' content = 'How to create Tanaka contours' />
-<meta property = 'twitter:description'  content = 'Tanaka contours aka illuminated contours is terrain visualization method developed first by Prof. Tanaka Kitirito in 1950. The mimics 3D by illuminating the …'/>
-<meta name = 'twitter:image' content = 'https://kevelyn1.github.io/mapcrastinating/images/tanaka_banner.png' />
+<meta name = 'twitter:title' content = 'How to create a paper-cut style map' />
+<meta property = 'twitter:description'  content = 'I&rsquo;m not sure where the paper cut style originates but I guess it has been around in the design world already long time. However, likely one of the first …'/>
+<meta name = 'twitter:image' content = 'https://kevelyn1.github.io/mapcrastinating/images/paper_cut_banner.png' />
 <link rel='apple-touch-icon' sizes='180x180' href='https://kevelyn1.github.io/mapcrastinating/images/icons/apple-touch-icon.png'>
 <link rel='icon' type='image/png' sizes='32x32' href='https://kevelyn1.github.io/mapcrastinating/images/icons/favicon-32x32.png'>
 <link rel='icon' type='image/png' sizes='16x16' href='https://kevelyn1.github.io/mapcrastinating/images/icons/favicon-16x16.png'>
 <link rel='manifest' href='https://kevelyn1.github.io/mapcrastinating/images/icons/site.webmanifest'>
 
-  <link rel='canonical' href='https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/'>
+  <link rel='canonical' href='https://kevelyn1.github.io/mapcrastinating/post/paper_cut/'>
   <link rel = 'stylesheet' href = 'https://kevelyn1.github.io/mapcrastinating/css/styles.8d153cdb809805e59c725b446993f7897b997cd1dd369fac445798a52f0120113c4b11ac6d212a6c44a7ecd661878655f00b8efd9c44c526d7af43fe59045a76.css' integrity = 'sha512-jRU824CYBeWccltEaZP3iXuZfNHdNp&#43;sRFeYpS8BIBE8SxGsbSEqbESn7NZhh4ZV8AuO/ZxExSbXr0P&#43;WQRadg=='>
 </head>
 
@@ -46,52 +46,29 @@
 
     <main>
 
-<section class = 'post_header' style = 'background-image:url(https://kevelyn1.github.io/mapcrastinating/images/tanaka_banner.png);'>
-  <h1 class='post_title'>How to create Tanaka contours</h1>
+<section class = 'post_header' style = 'background-image:url(https://kevelyn1.github.io/mapcrastinating/images/paper_cut_banner.png);'>
+  <h1 class='post_title'>How to create a paper-cut style map</h1>
 </section>
 <div class = 'post'>
-  <article class='post_content'><p><a href="http://wiki.gis.com/wiki/index.php/Tanaka_contours">Tanaka contours</a> aka illuminated contours is terrain visualization method developed first by Prof. Tanaka Kitirito in 1950. The mimics 3D by illuminating the northwestern slopes and shading the opposite slopes.
-I followed <a href="https://anitagraser.com/2015/05/24/how-to-create-illuminated-contours-tanaka-style/">Anita Graser&rsquo;s tutorial</a> to create Tanaka contours and updated it a bit as QGIS has evolved since then. Her tutorial was inspired by <a href="https://anitagraser.com/2015/05/24/how-to-create-illuminated-contours-tanaka-style/">Hannes Kröger&rsquo;s attempt to create the effect using QGIS</a>.</p>
-<p>You need a DEM for creating Tanaka contours. If you don&rsquo;t have any yourself then you may download free <a href="https://dwtkns.com/srtm30m/">SRTM</a>. First step is to create contours from the raster DEM by using Contours tool in QGIS.
-<img src="../../images/blog/tanaka_1.png" alt="image of create contours">
-<img src="../../images/blog/tanaka_2.png" alt="image of contours"></p>
-<p>To apply different brightness for the contours depending on their aspect, we need to compute the orientation of every subsection of the contours. Therefore, we need to split the contour lines at each node. We can use v.split tool from the Processing toolbox. Set the maximum number of erices in a segment to 2.
-<img src="../../images/blog/tanaka_3.png" alt="image of split contours">
-If we apply arrow style on the split contours then we can see that the segments run clockwise around the hills.
-<img src="../../images/blog/tanaka_4.png" alt="image of split contours arrows"></p>
-<p>Now we can calculate the orientation (aspect) of the contour segments using, for example, using an expression:<br>
-<img src="../../images/blog/tanaka_5.png" alt="image of calc azimuth">
-As the function &lsquo;azimuth&rsquo; returns values in radians then we need to apply also the &lsquo;degrees&rsquo; function to pbtain the values in 0-360 degrees.</p>
-<p>Based on the orientation values of the segments, we can then use an expression to control the contour line color. For example, if we want the sun to appear in the north west (-45°) we can use:</p>
-<hr>
-<pre><code>  color_hsl( 0,0,
-    scale_linear( abs(
-      ( CASE WHEN &quot;azimuth&quot;-45 &lt; 0
-      THEN &quot;azimuth&quot;-45+360
-      ELSE &quot;azimuth&quot;-45
-      END )
-      -180), 0, 180, 0, 100)
-      )
-</code></pre>
-<p><img src="../../images/blog/tanaka_7.png" alt="image of apply color on azimuth">
-<img src="../../images/blog/tanaka_6.png" alt="image of apply color on azimuth2">
-Function &lsquo;color_hsl&rsquo; returns a string representation of a color based on its hue, saturation, and lightness attributes. We will make the first two values as zeroes because we just want the color to change from white to black (monochrome). Function &lsquo;scale_linear&rsquo; transforms a given value (currently azimuth) from an input domain to an output range using linear interpolation.All this together will color the lines which are directly exposed to the sun (north-west) white hsl(0,0,100) while the ones in the shadows will be black hsl(0,0,0). Use the Overlay layer blending mode to blend contours and DEM color.
-<img src="../../images/blog/tanaka_8.png" alt="image of apply color on azimuth3"></p>
-<p>Choose the color palette to your liking and in order to match the contour lines with the color breaks, we need to make the color classification discrete instead of a smooth gradient. This can easily be achieved by changing the color interpolation mode of the DEM from Linear to Discrete and Mode from Continuous to Equal interval and matching the class number with the elevation classes on your map:
-<img src="../../images/blog/tanaka_9.png" alt="image of apply discrete color">
-<img src="../../images/blog/tanaka_10.png" alt="image of apply discrete color"></p>
-<p>The effect would be even more realistic if the slopes in the sun would be wider and the orthogonal slopes would be thinner as pointed out by Hannes Kröger. For example, we can use the similar expression on the line width as on color to change the lines in the sun or shadow wider (0.6 in this example) and orthogonal lines thinner (0.1 in this example):</p>
-<hr>
-<pre><code>scale_linear(
-  abs( abs(
-    ( CASE WHEN &quot;azimuth&quot;-45 &lt; 0
-      THEN &quot;azimuth&quot;-45+360
-      ELSE &quot;azimuth&quot;-45
-    END )
-  -180) -90),
-  0, 90, 0.1, 0.6)
-</code></pre>
-<p><img src="../../images/blog/tanaka_11.png" alt="image of apply discrete color"></p>
+  <article class='post_content'><p>I&rsquo;m not sure where the paper cut style originates but I guess it has been around in the design world already long time. However, likely one of the first GIS-approaches was done by <a href="https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/paper-cut-map-style/">John Nelson</a> with ArcPro. This is also available as <a href="https://esri-styles.maps.arcgis.com/home/item.html?id=6c01b3d015ce40eca7846941d6313fe8">style for ArcPro</a>. However, I aimed to create the same style with QGIS and the mapping theme was inspired by the beautiful snow this winter in Estonia.</p>
+<p>For input data you would need any numerical point data (rain, temperature, snow etc.) that you use for interpolation. As said before, I used snow depth in Estonia on 4th of February 2022. In addition, you would also need the region (country) of your map. In my case, it&rsquo;s Estonia and the initial data looks like this:</p>
+<p><img src="../../images/blog/paper_1.png" alt="image of start"></p>
+<p>First, we need to use interpolation. There are several option and the simplest is IDW (Inverse Distance Weighted), however, it is know to have a bulls&rsquo;s eye patterns around data points. Therefore, it is better to use splines. Though splines have also a shortcoming by extending the values outside the original range a bit but they create a more realistic surface than IDW. If you would want to keep the exact original value range then you should use IDW. For this tutorial, exact values are not relevant and we will use splines. Open v.surf.rst tool from the Processing toolbox (yif the tool does not open then close QGIS and reopen QGIS with GRASS). Add your point data as Input points layer and identify the attribute column where the values are what you want to interpolate. All the other parameters can be left as default, except for under the Advanced parameters the region extent should be defined by your study region (<img src="../../images/blog/3_dots.png" alt="image of 3 dots">-&gt;Calculate from layer, and use your region of interest or alternatively use the map canvas extent). From output, we need only the Interpolated RST, therefore, assign appropriate name to this and run the tool.
+<img src="../../images/blog/paper_2.png" alt="image of interpolation tool">
+<img src="../../images/blog/paper_3.png" alt="image of interpolation"></p>
+<p>Next we can generate contours that can be later shaded for the paper-cut style. Open Contour Polygons from the Processing Toolbox. Add the interpolation output from the previous step as input to this tool. Choose the suitable Interval between the contour lines (in this case 5) and save the output with suitable file name. The output will be contours as polygons which enables to use shading for styling that will create the paper-cut style impression.</p>
+<p>Now the fun part - styling. Open the contours' layer&rsquo;s Symbology and use Graduated color schema, choose appropriate colors and classify. Once the classes exist, select them all and click on the Symbol, so that the Symbol Settings will open.
+<img src="../../images/blog/paper_4.png" alt="image of symbology"></p>
+<p>Under the Symbol Settings click on the Simple Fill. You can now change the Stroke width and color if you wish. Enable the Draw Effects and click on the yellow star next to it to open the Effect Properties. Enable Drop Shadow and reduce the Blur radius and Offset to approx. 0.5. You might need to change also the Offset direction in degrees. You can apply the changes and see the effect and adjust again once satisfied.
+<img src="../../images/blog/paper_5.png" alt="image of symbology"></p>
+<p>Eventually should look something like this.
+<img src="../../images/blog/paper_6.png" alt="image of contours colored"></p>
+<p>To finalise the map, you can &ldquo;crop&rdquo; it with your study area borders by using Inverted Polygons Symbology. Open the Symbology of your study area layer and change the symbology to Inverted Polygons.  This will invert the polygon fill to the outside of the area. If you want to create additional halo-effect, then you may apply Shapeburst Fill to the Fill. You can use two colors  for creating the gradient, and set appropriate distance for the gradient.</p>
+<p><img src="../../images/blog/paper_7.png" alt="image of contours final"></p>
+<p>Finally, you can add the original point data with labels to the map. However, if you want to show the original values on the map then they might not align exactly with the interpolation like said before. Only IDW method would keep the exact ranges. Therefore I will show only weather station names on this map.
+<img src="../../images/blog/paper_8.png" alt="image of contours final"></p>
+<p>The same map made with IDW interpolation would look like this:
+<img src="../../images/blog/paper_9.png" alt="image of contours final"></p>
 
     
     <div class = 'post_extra'><div class = 'copy' data-share = 'Copy' data-copied = 'Copied'><svg>
@@ -116,7 +93,7 @@ Function &lsquo;color_hsl&rsquo; returns a string representation of a color base
   <aside><h3>More from Evelyn Uuemaa&#39;s Maps</h3>
 <ul class='posts aside'>
 <li class = 'post_item fp'>
-  <a class = 'post_card' href='https://kevelyn1.github.io/mapcrastinating/post/paper_cut/' title = 'How to create a paper-cut style map' style = 'background-image: url(https://kevelyn1.github.io/mapcrastinating/images/paper_cut_banner.png);'>
+  <a class = 'post_card' href='https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/' title = 'How to create Tanaka contours' style = 'background-image: url(https://kevelyn1.github.io/mapcrastinating/images/tanaka_banner.png);'>
   </a>
   <div class = 'excerpt'>
     <div class = 'excerpt_meta'>
@@ -128,9 +105,9 @@ Function &lsquo;color_hsl&rsquo; returns a string representation of a color base
 
     </div>
     <h3 class = 'post_link'>
-      <a href='https://kevelyn1.github.io/mapcrastinating/post/paper_cut/'>How to create a paper-cut style map</a>
+      <a href='https://kevelyn1.github.io/mapcrastinating/post/tanaka_contours/'>How to create Tanaka contours</a>
     </h3>
-    <p class = 'pale'>I&rsquo;m not sure where the paper cut style originates but I guess it has been around in …</p>
+    <p class = 'pale'>Tanaka contours aka illuminated contours is terrain visualization method developed first …</p>
   </div>
 </li>
 
