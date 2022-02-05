@@ -12,11 +12,17 @@
 - git push origin master
 
 Start git bash in \my_blog
-Type hugo serve to the command line and copy the web address (something like http://localhost:1313/mapcrastinating/) to your browser - there you can see the changes locally.
+Type "hugo serve" to the command line and copy the web address (something like http://localhost:1313/mapcrastinating/) to your browser - there you can see the changes locally.
 Once the changes are finished use git bash to:
+
+hugo #to build the webpage
+
+#to upload the data ot github
 - git add .
 - git commit -m "bug fix new content"
 - git push origin master
+
+
 
 
 All images go to: \my_blog\static\images
